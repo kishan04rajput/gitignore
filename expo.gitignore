@@ -1,0 +1,68 @@
+# macOS
+.DS_Store
+
+# Local environment variables
+.env
+.env*.local
+
+# Node.js dependencies
+node_modules/
+
+# Expo specific
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Android specific
+android/*
+*.jks
+*.key
+*.orig.*
+*.keystore
+
+# iOS specific
+ios/*
+*.p8
+*.p12
+*.mobileprovision
+
+# IDE settings
+.idea/
+
+# Metro cache
+.metro-cache/
+.metro-health-check*
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Kotlin build cache (if used)
+.kotlin/
+
+# PEM files (private keys, certificates)
+*.pem
+
+# Other local files
+app-example
+
+# Expo generated files
+.expo-shared/
+
+# Optional: Ignore test coverage reports (if using a tool like Jest)
+coverage/
+
+build-*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+*.apk
+*.ipa

@@ -1,11 +1,12 @@
 # See https://docs.docker.com/engine/reference/builder/#dockerignore-file for more about ignoring files.
 
-# Ignore git directory.
+# Ignore Git-related files.
 /.git/
 /.gitignore
 
-# Ignore bundler config.
+# Ignore bundler config and installed gems.
 /.bundle
+/vendor/bundle/
 
 # Ignore all environment files.
 /.env*
@@ -14,7 +15,7 @@
 /config/master.key
 /config/credentials/*.key
 
-# Ignore all logfiles and tempfiles.
+# Ignore logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
@@ -30,11 +31,19 @@
 /tmp/storage/*
 !/tmp/storage/.keep
 
-# Ignore assets.
+# Ignore assets, compiled assets, and node modules.
 /node_modules/
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /public/assets
+/public/packs/
+/public/system/
+/public/uploads/ # For Active Storage uploads
+
+# Ignore database files.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/config/database.yml # Exclude from version control (often paired with database.yml.example)
 
 # Ignore CI service files.
 /.github
@@ -43,10 +52,23 @@
 /config/deploy*.yml
 /.kamal
 
-# Ignore development files
+# Ignore development files.
 /.devcontainer
+/.vscode/ # Visual Studio Code
+/.idea/ # RubyMine/IntelliJ IDEA
+*.swp # Vim swap files
+/.byebug_history # Byebug debugger history
 
-# Ignore Docker-related files
+# Ignore test and coverage files.
+/coverage/
+.rspec
+
+# Ignore Sass cache files.
+.sass-cache
+
+# Ignore macOS-specific files.
+.DS_Store
+
+# Ignore Docker-related files.
 /.dockerignore
 /Dockerfile*
-
